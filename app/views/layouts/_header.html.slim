@@ -1,0 +1,13 @@
+.ui.small.menu
+  .ui.container
+    = link_to 'Chatroom', root_path, class: 'item'
+    a.item
+      | Messages
+    .right.menu
+      .ui.dropdown.item
+        | Account
+        i.dropdown.icon
+        .menu
+          a.item Sign up
+          = link_to 'Sign in', login_path, class: 'item'
+          a.item Log out
