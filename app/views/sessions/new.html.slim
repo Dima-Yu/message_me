@@ -9,18 +9,18 @@ h4.ui.center.aligned.medium.icon.header
 .ui.placeholder.segment
   .ui.two.column.very.relaxed.stackable.grid
     .column
-      .ui.form
+      = form_with(scope: :session, url: login_path, local: true, class: 'ui form') do |f|
         .field
-          label Username
+          = f.label :name
           .ui.left.icon.input
-            input placeholder="Username" type="text" /
+            = f.text_field :name, placeholder: "Username"
             i.user.icon
         .field
-          label Password
+          = f.label :password
           .ui.left.icon.input
-            input type="password" /
+            = f.password_field :password, placeholder: "Password"
             i.lock.icon
-        .ui.orange.submit.button Login
+        = f.submit "Log in", class: "ui orange submit button"
     .middle.aligned.column
       .ui.big.orange.button
         i.signup.white.icon

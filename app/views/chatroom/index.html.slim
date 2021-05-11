@@ -7,32 +7,7 @@ h4.ui.center.aligned.medium.icon.header
     .ui.fluid.raised.card.chatbox
       .ui.content
         .ui.small.feed
-          .event
-            .content
-              .summary
-                a Elliot Fu
-                | added
-                a Jenny Hess
-                | as a friend
-          .event
-            .content
-              .summary
-                a Stevie Feliciano
-                | added
-                a Elliot Fu
-                | as a friend
-          .event
-            .content
-              .summary
-                a Helen Troy
-                | added
-                a Christian Rocha
-                | as a friend
-          .event
-            .content
-              .summary
-                a Christian Rocha
-                | signed up for the  site.
+          = render messages_list
       .ui.extra.content
         form.ui.reply.form
           .field
@@ -50,4 +25,3 @@ h4.ui.center.aligned.medium.icon.header
             | Messages
           a.item
             | Friends
-
