@@ -1,10 +1,8 @@
 class MessagesController < ApplicationController
   before_action :require_user
   def create
-    message = current_user.messages.build(msg_params) 
-    if message.save
-      redirect_to root_path
-    end
+    message = current_user.messages.build(msg_params)
+    redirect_to root_path if message.save
   end
 
   private
