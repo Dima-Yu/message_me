@@ -1,5 +1,5 @@
 module MessageHelper
   def messages_list
-    @messages = Message.all
+    @messages = Message.custom_display
   end
 end
